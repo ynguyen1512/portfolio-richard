@@ -1,8 +1,8 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
-import project1 from "/public/images/services/frontend-web-development.png";
-import project2 from "/public/images/services/wordPress-website-creation.png";
-import project3 from "/public/images/services/figma-to-HTML-conversion.png";
+import project1 from "/public/images/projects/Restoran.png";
+import project2 from "/public/images/projects/Positivus.png";
+import project3 from "/public/images/projects/scoop-home.png";
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 
@@ -16,21 +16,22 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: "Positivus - Responsive Landing Page",
-    description:
-      "This is a fully responsive landing page created based on the SMIT - Web Batch 12 Module 1 design on Figma. The project uses HTML, CSS, Bootstrap, and a little bit of JavaScript to deliver a smooth and interactive experience. It adapts seamlessly to different screen sizes, ensuring a great user experience across devices.",
-    image: project1,
-    liveLink: "https://codewithshabbir.github.io/Positivus/",
-    tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
-  },
-  {
     title: "Restoran - Complete Front-end Solution",
     description:
       "A sleek, modern, and fully responsive website template for restaurants, built with HTML, CSS, Bootstrap, JavaScript, Slick Slider, and AOS. This template includes sections like the menu, about us, testimonials, gallery, and contact information, designed to offer a seamless user experience across all devices.",
-    image: project2,
+    image: project1,
     liveLink: "https://codewithshabbir.github.io/Restoran/",
     tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Slick Slider", "AOS"],
   },
+  {
+    title: "Positivus - Responsive Landing Page",
+    description:
+      "This is a fully responsive landing page created based on the SMIT - Web Batch 12 Module 1 design on Figma. The project uses HTML, CSS, Bootstrap, and a little bit of JavaScript to deliver a smooth and interactive experience. It adapts seamlessly to different screen sizes, ensuring a great user experience across devices.",
+    image: project2,
+    liveLink: "https://codewithshabbir.github.io/Positivus/",
+    tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
+  },
+  
   {
     title: "Social Scoop - Responsive Landing Page",
     description:

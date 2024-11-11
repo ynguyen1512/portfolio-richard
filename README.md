@@ -5,7 +5,7 @@ Welcome to the repository for my personal portfolio website, live at [codewithsh
 > **Note:** This is a personal project and is not intended for public or commercial use.
 
 ---
-![CodeWithShabbir Portfolio](/images/portfolio-screenshot.png)
+![CodeWithShabbir Portfolio](/public/images/portfolio-screenshot.png)
 
 ## 🔒 Usage Restrictions
 
@@ -73,4 +73,4 @@ This project is solely for my personal portfolio. **Unauthorized use, copying, o
 
 ## 📝 License
 
-This project is **not licensed for public use**. All rights reserved by the author, [https://www.linkedin.com/in/codewithshabbir/](Muhammad Shabbir). Unauthorized use or redistribution of this project is prohibited.
+This project is **not licensed for public use**. All rights reserved by the author, [Muhammad Shabbir](https://www.linkedin.com/in/codewithshabbir/) . Unauthorized use or redistribution of this project is prohibited.
