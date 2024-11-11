@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio - Code with Shabbir 🌐
 
-## Getting Started
+Welcome to the repository for my personal portfolio website, live at [codewithshabbir.vercel.app](https://codewithshabbir.vercel.app/). This project showcases my skills, projects, and professional experience in web development.
 
-First, run the development server:
+> **Note:** This is a personal project and is not intended for public or commercial use.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+![CodeWithShabbir Portfolio](/images/portfolio-screenshot.png)
+
+## 🔒 Usage Restrictions
+
+This project is solely for my personal portfolio. **Unauthorized use, copying, or redistribution of any part of this project is strictly prohibited.**
+
+## 🚀 Features
+
+- **Responsive Design:** Built to deliver a seamless experience across all devices.
+- **Interactive Animations:** Utilizes AOS (Animate on Scroll) to enhance user engagement with smooth animations.
+- **Organized Projects Section:** Projects are neatly categorized, allowing visitors to navigate through my work easily.
+- **Modern UI/UX:** A focus on clean design and intuitive navigation.
+
+## 🛠️ Technology Stack
+
+- **Frontend:** HTML, CSS, TypeScript
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS and custom CSS
+- **Animation Library:** AOS (Animate on Scroll)
+- **Hosting:** Vercel
+- **Fonts:** 'Lufga' font family
+
+## 📂 Project Structure
+
+```
+├── components    # Reusable components used across pages
+├── public        # Static assets (images, fonts, etc.)
+├── styles        # Global and modular CSS files
+└── pages         # All Next.js pages (homepage, projects, contact)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Build the Project:**
+   ```bash
+   npm run build
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Start the Production Server:**
+   ```bash
+   npm start
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Folder & Code Organization
 
-## Deploy on Vercel
+- **Components Folder:** Contains reusable components such as header, footer, project cards, etc.
+- **Pages Folder:** Organized for different sections of the portfolio (home, projects, about, contact).
+- **Styles Folder:** Uses Tailwind CSS alongside modular CSS for specific styling needs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is **not licensed for public use**. All rights reserved by the author, [https://www.linkedin.com/in/codewithshabbir/](Muhammad Shabbir). Unauthorized use or redistribution of this project is prohibited.
