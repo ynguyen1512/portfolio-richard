@@ -83,7 +83,7 @@ export default function Home() {
                     <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
                         <Image className="w-full h-auto object-cover" src={aboutMe} alt=""/>
                     </div>
-                    <div data-aos="fade-left" className="col-span-12 lg:col-span-6 flex flex-col relative items-start">
+                    <div data-aos="fade-left" className="col-span-12 lg:col-span-6 flex flex-col relative items-start justify-center">
                         <h1 className="relative text-black text-4xl sm:text-5xl">About Me</h1>
                         <div className="flex mt-2">
                             <div className="relative ms-24 w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
@@ -344,7 +344,7 @@ export default function Home() {
                         <li className="my-2"><a className="flex gap-4 items-center" target="_blank" href="https://github.com/codewithshabbir"> <FaGithub className="bg-orange-500 text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center"/> codewithshabbir</a></li>
                     </ul>
                 </div>
-                <div className="col-span-12 md:col-span-6">
+                <div className="col-span-12 md:col-span-6 flex justify-center">
                     <div data-aos="fade-left" className="bg-orange-500 p-8 rounded-lg w-full max-w-xl">
                         <ContactForm/>
                     </div>
