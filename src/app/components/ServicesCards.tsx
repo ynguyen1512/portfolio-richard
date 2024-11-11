@@ -33,6 +33,7 @@ const ServicesCards:React.FC = () => {
     <div className="grid grid-cols-12 gap-6 justify-items-center">
       {servicesData.map((service) => (
         <div
+          data-aos="fade-up"
           key={service.id}
           className="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 inverted-radius relative border shadow-md w-full"
         >

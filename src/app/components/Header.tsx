@@ -3,11 +3,19 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "/public/images/muhammad-shabbir-logo.png";
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  // Handle window resizing to close the mobile menu on larger screens
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        offset: 100,  
+      });
+    }, []); 
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 770) {
@@ -17,13 +25,11 @@ const Header: React.FC = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // Handle scroll event to add/remove classes on scroll
   useEffect(() => {
     const handleScroll = () => {
       const firstChild = document.body.children[0];
@@ -56,7 +62,6 @@ const Header: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup scroll event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -79,24 +84,26 @@ const Header: React.FC = () => {
               <a href="#">Home</a>
             </li>
             <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#">About</a>
+              <a href="#about-me">About</a>
             </li>
             <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#">Service</a>
+              <a href="#service">Service</a>
             </li>
           </ul>
           <div className="logo flex items-center">
-            <Image src={logo} alt="Logo" />
+            <a href="#">
+              <Image src={logo} alt="Logo" />
+            </a>
           </div>
           <ul className="flex items-center">
             <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#">Resume</a>
+              <a href="#skills">Skills</a>
             </li>
             <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#">Project</a>
+              <a href="#projects">Project</a>
             </li>
             <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
@@ -104,7 +111,9 @@ const Header: React.FC = () => {
         {/* Mobile navigation */}
         <nav className="lg:hidden flex justify-between w-full items-center py-2">
           <div className="logo flex items-center">
-            <Image src={logo} alt="Logo" />
+            <a href="#">
+              <Image src={logo} alt="Logo" />
+            </a>
           </div>
           <HiOutlineMenu
             className="text-white text-2xl cursor-pointer"
@@ -118,7 +127,7 @@ const Header: React.FC = () => {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden z-50 fixed top-0 left-0 w-full h-screen bg-black text-white flex flex-col items-center justify-center transform transition-transform duration-300 ${
+        className={`mobile-menu lg:hidden z-50 fixed top-0 left-0 w-full h-screen bg-black text-white flex flex-col items-center justify-center transform transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -133,22 +142,22 @@ const Header: React.FC = () => {
         </div>
         <ul className="flex flex-col items-center space-y-6">
           <li className="text-white mx-10 relative">
-            <a href="#">Home</a>
+            <a href="#" onClick={handleCloseMenu}>Home</a>
           </li>
           <li className="text-white mx-10 relative">
-            <a href="#">About</a>
+            <a href="#about-me" onClick={handleCloseMenu}>About</a>
           </li>
           <li className="text-white mx-10 relative">
-            <a href="#">Service</a>
+            <a href="#service" onClick={handleCloseMenu}>Service</a>
           </li>
           <li className="text-white mx-10 relative">
-            <a href="#">Resume</a>
+            <a href="#skills" onClick={handleCloseMenu}>Skills</a>
           </li>
           <li className="text-white mx-10 relative">
-            <a href="#">Project</a>
+            <a href="#projects" onClick={handleCloseMenu}>Project</a>
           </li>
           <li className="text-white mx-10 relative">
-            <a href="#">Contact</a>
+            <a href="#contact" onClick={handleCloseMenu}>Contact</a>
           </li>
         </ul>
       </div>

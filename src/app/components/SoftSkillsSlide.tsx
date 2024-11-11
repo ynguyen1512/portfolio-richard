@@ -19,7 +19,7 @@ const SoftSkillsSlide: React.FC = () => {
         <ul className="flex animate-slide whitespace-nowrap items-center">
           {
             [...softSkills, ...softSkills].map((skill, index) => (
-              <div className="inline-flex items-center ">
+              <div key={index} className="inline-flex items-center ">
                 <li className="inline-block">{skill}</li>
                 <CiStar  className="mx-2 text-red-600 w-6" />
               </div>

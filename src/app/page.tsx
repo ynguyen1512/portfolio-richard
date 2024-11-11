@@ -2,9 +2,6 @@ import Image from "next/image";
 import bannerModel from "/public/images/banner-modal.png";
 import upRightArrow from "/public/images/up-right.svg";
 import servicesBg from "/public/images/services-bg.png";
-import project1 from "/public/images/services/frontend-web-development.png";
-import project2 from "/public/images/services/wordPress-website-creation.png";
-import project3 from "/public/images/services/figma-to-HTML-conversion.png";
 import aboutMe from "/public/images/about-me.png";
 import helloTop from "/public/images/hello-top.svg";
 import nameBottom from "/public/images/name-bottom.svg";
@@ -17,73 +14,76 @@ import ServicesCards from "./components/ServicesCards";
 import ProgressBar from "./components/ProgressBar";
 import SoftSkillsSlide from "./components/SoftSkillsSlide";
 import Projects from "./components/Projects";
-
-
+import Button from "./components/Button";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
    <>
-      <section className="banner relative overflow-hidden">
+        <section className="banner relative overflow-hidden">
         <ResponsiveGrid itemCount={128}/>
             <div className="relative">
                 <div className="flex flex-col items-center pt-40">
                     <div className="relative">
-                        <h4 className="text-xl font-semibold border border-black px-6 py-1 rounded-full">Hello</h4>
-                        <Image className="absolute -top-6 -right-6" src={helloTop} alt=""/>
+                        <h4 className="animate-fade-left text-xl font-semibold border border-black px-6 py-1 rounded-full">Hello</h4>
+                        <Image className="animate-fade-left absolute -top-6 -right-6" src={helloTop} alt=""/>
                     </div>
                     <div className="relative">
-                        <h1 className="cursor-scale text-4xl sm:text-5xl lg:text-6xl font-bold text-center tracking-wide word leading-tight">I'm <span className="underline stroke-orange-500">Muhammad Shabbir,</span> <br/>
+                        <h1 className="animate-fade-right cursor-scale text-2xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-center tracking-wide word leading-tight">I'm <span className="underline stroke-orange-500">Muhammad Shabbir,</span> <br/>
                             Website Developer
                         </h1>
-                        <Image className="absolute -bottom-12 left-0 sm:left-3 lg:left-4 w-[55px] sm:w-[60px] lg:w-auto" src={nameBottom} alt=""/>
+                        <Image className="animate-fade-right absolute -bottom-12 -left-4 xs:left-0 sm:left-3 lg:left-4 w-[55px] sm:w-[60px] lg:w-auto" src={nameBottom} alt=""/>
                     </div>
                 </div>
-                <div className="flex flex-col items-center relative -m-16 mb-0">
+                <div className="flex flex-col items-center relative -mt-10 sm:-mt-16 mb-0">
                     <div className="image relative flex justify-center">
-                        <Image src={bannerModel} alt="Model"/>
+                        <Image className="animate-fade-up" src={bannerModel} alt="Model"/>
                     </div>
     
                     <div className="absolute z-[2] bottom-10">
                         <div className="slide-button-wrapper relative bg-white bg-opacity-25 rounded-full w-auto p-3">
                             <input className="hidden" type="radio" name="slide" id="button-one"/>
                             <input className="hidden" type="radio" name="slide" id="button-two"/>
-                        
-                            <div className=" cursor-scale button-container flex">
-                                <a className="z-[2]" href="">
-                                    <label className="text-md sm:text-xl cursor-pointer text-white flex justify-center items-center w-32 sm:w-40 h-14" htmlFor="button-one">
+
+                            <div className="cursor-scale button-container flex">
+                                <label className="z-[2] text-md sm:text-xl cursor-pointer text-white flex justify-center items-center w-32 sm:w-40 h-14" htmlFor="button-one">
+                                    <a href="#projects" className="flex items-center">
                                         Portfolio
                                         <Image src={upRightArrow} alt="Arrow"/>
-                                    </label>
-                                </a>
-                                
-                                <a className="z-[2]" href="">
-                                    <label className="text-md sm:text-xl cursor-pointer text-white flex justify-center items-center w-32 sm:w-40 h-14" htmlFor="button-two">
+                                    </a>
+                                </label>
+
+                                <label className="z-[2] text-md sm:text-xl cursor-pointer text-white flex justify-center items-center w-32 sm:w-40 h-14" htmlFor="button-two">
+                                    <a href="#contact" className="flex items-center">
                                         Hire Me
                                         <Image src={upRightArrow} alt="Arrow"/>
-                                    </label>
-                                </a>
-                            </div>                        
-                        
+                                    </a>
+                                </label>
+                            </div>
+
                             <div className="slide-buttons z-[1] absolute top-3 bg-orange-500 w-32 sm:w-40 h-14 transition-transform duration-300 rounded-full"></div>
                         </div>
+
                     </div>
                 </div>
             </div>
-      </section>
-      <section className="service relative px-4 md:px-20">
+        </section>
+        <section id="service" className="service relative px-4 md:px-20">
             <Image className="absolute w-full rounded-[45px] bottom-0 left-0" src={servicesBg} alt=""/>
-            <div className="relative py-20">
-                <SectionHeadings heading="My Services"/>
-                <ServicesCards/>
+            <div data-aos="fade-up">
+                <div className="relative py-20">
+                    <SectionHeadings heading="My Services"/>
+                    <ServicesCards/>
+                </div>
             </div>
-      </section>
-      <section className="about-me relative py-20">
+        </section>
+        <section id="about-me" className="relative py-20">
             <div className="container mx-auto px-4 sm:px-10">
                 <div className="grid grid-cols-12 gap-6 mt-10">
-                    <div className="col-span-12 lg:col-span-6">
+                    <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
                         <Image className="w-full h-auto object-cover" src={aboutMe} alt=""/>
                     </div>
-                    <div className="col-span-12 lg:col-span-6 flex flex-col relative items-start">
+                    <div data-aos="fade-left" className="col-span-12 lg:col-span-6 flex flex-col relative items-start">
                         <h1 className="relative text-black text-4xl sm:text-5xl">About Me</h1>
                         <div className="flex mt-2">
                             <div className="relative ms-24 w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
@@ -106,30 +106,31 @@ export default function Home() {
                         </div>
         
                         <div className="relative block mt-8 line">
-                            <a className="about-btn border-2 border-orange-500 relative inline-block text-[16px] leading-[50px] font-bold bg-transparent rounded-xl px-[35px] pt-[1px] pb-0 overflow-hidden font-sans capitalize transition-all ease-linear duration-300 stroke-orange-500 hover:text-white z-[1]" target="_blank" href="about">
-                                Download Resume
-                                <FaDownload className="ml-1 inline-block text-sm font-bold" width={24} height={24}/>
-                                <span className="hover-btn hover-bx"></span>
-                                <span className="hover-btn hover-bx2"></span>
-                                <span className="hover-btn hover-bx3"></span>
-                                <span className="hover-btn hover-bx4"></span>
-                            </a>
+                        <Button
+                            classes="border-orange-500 bg-transparent stroke-orange-500 hover:text-white"
+                            title="Download Resume"
+                            icon={<FaDownload className="ml-1 inline-block text-sm font-bold" width={24} height={24} />}
+                            link="#"
+                        />
                         </div>
                     </div>
                 </div>
             </div>
-      </section>
+        </section>
 
-    <SoftSkillsSlide/>
+        <SoftSkillsSlide/>
       
-      <section className="skills py-20">
+        <section id="skills" className="skills py-20">
             <div>
+                <div data-aos="fade-up">
                 <h1 className="relative text-5xl text-center">My Skills</h1>
                 <div className="flex justify-center mt-2">
                     <div className="relative w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
                 </div>
+                </div>
+                
                 <div className="flex flex-col md:flex-row px-0 md:px-10 py-10">
-                    <div className="w-full md:w-2/4 px-5 md:px-10 mb-10 md:mb-0">
+                    <div data-aos="fade-right" className="w-full md:w-2/4 px-5 md:px-10 mb-10 md:mb-0">
                         <h2 className="text-2xl underline">Languages:</h2>
                         <div>
                             <label className="inline-block mt-3 mb-1">HTML</label>
@@ -161,7 +162,7 @@ export default function Home() {
                             <ProgressBar percentage={'80%'} width="w-[80%]"/>
                         </div>
                     </div>
-                    <div className="w-full md:w-2/4 px-5 md:px-10">
+                    <div data-aos="fade-left" className="w-full md:w-2/4 px-5 md:px-10">
                         <h2 className="text-2xl underline">Frameworks:</h2>
                         <div>
                             <label className="inline-block mt-3 mb-1">Bootstrap 5</label>
@@ -197,17 +198,19 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-      </section>
+        </section>
 
-      <SoftSkillsSlide/>
+        <SoftSkillsSlide/>
 
-      <section className="my-journey py-20">
-            <h1 className="relative text-5xl text-center">My Journey</h1>
+        <section className="my-journey py-20">
+            <div data-aos="fade-up">
+                <h1 className="relative text-5xl text-center">My Journey</h1>
                 <div className="flex justify-center mt-2 mb-14">
                     <div className="relative w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
                 </div>
-                <div className="grid grid-rows-1 grid-cols-12 gap-6 mx-4 md:mx-20">
-                    <div className="col-span-12 lg:col-span-6">
+            </div>        
+            <div className="grid grid-rows-1 grid-cols-12 gap-6 mx-4 md:mx-20">
+                <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
                         <div className="card rounded-lg border-gray-300 shadow-2xl bg-gray-100 p-6">
                             <div className="border-b-2 flex items-center pb-4 gap-4">
                                 <HiAcademicCap className="bg-orange-400 text-white w-16 h-16 p-4 flex justify-center items-center rounded-full" />
@@ -265,8 +268,8 @@ export default function Home() {
                                 </div>                                
                             </div>
                         </div>
-                    </div>
-                    <div className="col-span-12 lg:col-span-6">
+                </div>
+                <div data-aos="fade-left" className="col-span-12 lg:col-span-6">
                         <div className="card rounded-lg border-gray-300 shadow-2xl bg-gray-100 p-6 mb-6">
                             <div className="border-b-2 flex items-center pb-4 gap-4">
                                 <HiBriefcase className="bg-orange-400 text-white w-16 h-16 p-4 flex justify-center items-center rounded-full" />
@@ -312,79 +315,38 @@ export default function Home() {
                                 </div>                                                           
                             </div>
                         </div>
-                    </div>
                 </div>
-      </section>
+            </div>
+        </section>
 
-      <section className="projects relative p-5 md:p-20 bg-black">
+        <section id="projects" className="projects relative p-5 md:p-20 bg-black">
             <Image className="absolute w-full rounded-[45px] bottom-0 left-0" src={servicesBg} alt=""/>
-            <div className="mb-14">
+            <div data-aos="fade-up" className="mb-14">
                 <h1 className="relative text-white text-3xl md:text-5xl text-center">My Projects</h1>
                 <div className="flex justify-center mt-2">
                     <div className="relative w-3 h-3 border border-white rounded-full before:absolute before:h-0.5 before:top-1 before:bg-white before:w-24 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-white after:w-24 after:left-5"></div>
                 </div>
             </div>
             <Projects/>
-      </section>
+        </section>
         
-        <section className="contact py-20 px-4 md:px-20">
+        <section id="contact" className="contact py-20 px-4 md:px-20">
             <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-12 md:col-span-6">
-                    <h2 className="text-5xl font-">Let's <span className="stroke-orange-500">Connect</span> & 
+                    <h2 data-aos="fade-up" className="text-5xl font-">Let's <span className="stroke-orange-500">Connect</span> & 
                         <br/> <span className="stroke-orange-500">Collaborate</span>
                     </h2>
-                    <p className="my-6">Thank you for visiting my portfolio! If you have any questions, inquiries, or collaboration opportunities, I’d love to hear from you. Please fill out the contact form or reach out through the provided social media links, and I’ll get back to you as soon as possible.</p>
+                    <p data-aos="fade-up" className="my-6">Thank you for visiting my portfolio! If you have any questions, inquiries, or collaboration opportunities, I’d love to hear from you. Please fill out the contact form or reach out through the provided social media links, and I’ll get back to you as soon as possible.</p>
 
-                    <ul>
+                    <ul data-aos="fade-up">
                         <li className="my-2"><a className="flex gap-4 items-center" href="tel:+923153987478"><HiPhone className="bg-orange-500 text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center"/>  +92 3153987478</a></li>
-                        <li className="my-2"><a className="flex gap-4 items-center" href="mailto:muhammadshabbir4589@gmail.com"><HiMail className="bg-orange-500 text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center"/> muhammadshabbir4589@gmail.com</a></li>
+                        <li className="my-2"><a className="flex gap-4 items-center" href="mailto:codewithshabbir07@gmail.com"><HiMail className="bg-orange-500 text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center"/> codewithshabbir07@gmail.com</a></li>
                         <li className="my-2"><a className="flex gap-4 items-center" target="_blank" href="https://github.com/codewithshabbir"> <FaGithub className="bg-orange-500 text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center"/> codewithshabbir</a></li>
                     </ul>
                 </div>
                 <div className="col-span-12 md:col-span-6">
-                    <div className="bg-orange-500 p-8 rounded-lg w-full max-w-xl">
-                        <form>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-white text-sm mb-2" htmlFor="first-name">First Name *</label>
-                                    <input type="text" id="first-name" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300" required/>
-                                </div>
-                                <div>
-                                    <label className="block text-white text-sm mb-2" htmlFor="last-name">Last Name *</label>
-                                    <input type="text" id="last-name" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300" required/>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                <div>
-                                    <label className="block text-white text-sm mb-2" htmlFor="email">Email *</label>
-                                    <input type="email" id="email" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300" required/>
-                                </div>
-                                <div>
-                                    <label className="block text-white text-sm mb-2" htmlFor="phone">Phone Number *</label>
-                                    <input type="text" id="phone" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300" required/>
-                                </div>
-                            </div>
-                            <div className="mt-4">
-                                <label className="block text-white text-sm mb-2" htmlFor="subject">Subject *</label>
-                                <input type="text" id="subject" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300" required/>
-                            </div>
-                            <div className="mt-4">
-                                <label className="block text-white text-sm mb-2" htmlFor="message">Message *</label>
-                                <textarea id="message" className="w-full p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300 h-32" required></textarea>
-                            </div>
-                            <div className="mt-6">
-                                <div className="relative block mt-8 line">
-                                    <a className="contact-btn border-2 border-white relative inline-block text-[16px] leading-[50px] font-bold bg-transparent rounded-xl px-[35px] pt-[1px] pb-0 overflow-hidden font-sans capitalize transition-all ease-linear duration-300 text-white hover:stroke-orange-500 z-[1]" target="_blank" href="https://html-template-task.netlify.app/">
-                                      Submit
-                                      <i className="fa fa-arrow-right ml-1 inline-block text-sm font-bold"></i>
-                                      <span className="hover-btn hover-bx"></span>
-                                      <span className="hover-btn hover-bx2"></span>
-                                      <span className="hover-btn hover-bx3"></span>
-                                      <span className="hover-btn hover-bx4"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </form>
+                    <div data-aos="fade-left" className="bg-orange-500 p-8 rounded-lg w-full max-w-xl">
+                        <ContactForm/>
                     </div>
                 </div>
             </div>

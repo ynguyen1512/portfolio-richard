@@ -4,6 +4,7 @@ import project1 from "/public/images/services/frontend-web-development.png";
 import project2 from "/public/images/services/wordPress-website-creation.png";
 import project3 from "/public/images/services/figma-to-HTML-conversion.png";
 import Image, { StaticImageData } from "next/image";
+import Button from "./Button";
 
 interface Project {
     title: string;
@@ -44,10 +45,10 @@ const Projects: React.FC = () => {
   return (
     <div>
       {projectsData.map((project) => (
-        <div className="grid grid-cols-1 md:grid-cols-12 projects-wrapper gap-6 my-4 p-5 rounded-3xl">
+        <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-12 projects-wrapper gap-6 my-4 p-5 rounded-3xl">
           <div className="md:col-span-4">
             <Image
-              className="rounded-3xl"
+              className="rounded-3xl w-full" layout="responsive"
               src={project.image}
               alt={project.title}
             />
@@ -59,27 +60,20 @@ const Projects: React.FC = () => {
             <p className="text-sm mt-2 text-gray-200 mb-2">
               {project.description}
             </p>
-            <div>
-              {project.tags.map((tags) => (
-                <span className="bg-orange-400 text-white rounded-xl px-3 mr-2 py-[0.5px]">
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tags, index) => (
+                <span key={index} className="bg-orange-400 text-white rounded-xl px-3 py-[0.5px]">
                   {tags}
                 </span>
               ))}
             </div>
             <div className="relative block mt-8 line">
-              <a
-                className="about-btn border-2 border-white relative inline-block text-[16px] leading-[50px] font-bold bg-transparent rounded-xl px-[35px] pt-[1px] pb-0 overflow-hidden font-sans capitalize transition-all ease-linear duration-300 text-white hover:text-white z-[1]"
-                target="_blank"
-                href={project.liveLink}
-                rel="noopener noreferrer"
-              >
-                Live Preview
-                <FaChevronRight className="ml-1 inline-block text-sm font-bold w-6" />
-                <span className="hover-btn hover-bx"></span>
-                <span className="hover-btn hover-bx2"></span>
-                <span className="hover-btn hover-bx3"></span>
-                <span className="hover-btn hover-bx4"></span>
-              </a>
+            <Button
+                classes="border-white bg-transparent text-white hover:text-white"
+                title="Live Preview"
+                icon={<FaChevronRight className="ml-1 inline-block text-sm font-bold w-6" />}
+                link={project.liveLink}
+            />
             </div>
           </div>
         </div>
