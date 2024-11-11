@@ -2,7 +2,7 @@ import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 import project1 from "/public/images/projects/Restoran.png";
 import project2 from "/public/images/projects/Positivus.png";
-import project3 from "/public/images/projects/scoop-home.png";
+import project3 from "/public/images/projects/Scoop-Home.png";
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
 
