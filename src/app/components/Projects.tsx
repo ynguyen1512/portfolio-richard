@@ -45,8 +45,8 @@ const projectsData: Project[] = [
 const Projects: React.FC = () => {
   return (
     <div>
-      {projectsData.map((project) => (
-        <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-12 projects-wrapper gap-6 my-4 p-5 rounded-3xl">
+      {projectsData.map((project, index) => (
+        <div key={index} data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-12 projects-wrapper gap-6 my-4 p-5 rounded-3xl">
           <div className="md:col-span-4">
             <Image
               className="rounded-3xl w-full" layout="responsive"

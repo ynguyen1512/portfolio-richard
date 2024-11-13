@@ -51,6 +51,7 @@ const ServicesCards:React.FC = () => {
             alt={service.title}
           />
         </div>
+        
       ))}
     </div>
   );
