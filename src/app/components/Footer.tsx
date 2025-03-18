@@ -2,7 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import { FaEnvelope, FaFacebook, FaLinkedin, FaMap, FaPhone } from 'react-icons/fa';
 import BackToTop from './BackToTop';
-import logo from '/public/images/logo.jpeg';
+import logo from "/public/images/avatar-richard.jpg";
+
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Footer: React.FC = () => {
             <div className="col-span-12 lg:col-span-4">
               <div className="logo">
                 <a href="#">
-                  <Image src={logo} alt="Logo" className='rounded-full md:mb-2' />
+                  <Image src={logo} alt="Logo" className='rounded-full md:mb-2 md:w-[100px] md:h-[100px] object-cover max-sm:h-[150px] max-sm:w-[150px]' />
                 </a>
                 <p className="text-gray-300 text-sm max-sm:mt-4">
                   Hi, I'm Richard Nguyen, a passionate web developer with expertise in creating modern, responsive websites. With a strong background in HTML, CSS, JavaScript, ReactJS, NextJS and WordPress, I specialize in delivering high-quality web solutions. Explore my portfolio to see my latest projects and get in touch for collaborations!

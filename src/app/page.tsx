@@ -1,7 +1,7 @@
 import { LinkedinIcon } from "lucide-react";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa6";
-import { HiBookOpen, HiBriefcase, HiMail, HiPhone } from 'react-icons/hi';
+import { HiBriefcase, HiMail, HiPhone } from 'react-icons/hi';
 import Button from "./components/Button";
 import Projects from "./components/Projects";
 import antDesignLogo from "/public/images/ant-design.svg";
@@ -29,19 +29,19 @@ export default function Home() {
             </section>
             <section id="about-me" className="relative py-20">
                 <div className="container mx-auto px-4 sm:px-10">
-                    <div className="grid grid-cols-12 gap-12 mt-10">
-                        <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
-                            <Image className="w-full h-auto object-cover rounded-full max-sm:w-[250px]" src={aboutMe} alt="" />
+                    <div className="flex justify-center w-full gap-12 mt-10 max-sm:flex-col">
+                        <div data-aos="fade-right" className="w-full">
+                            <Image className="h-[500px] w-[500px] object-cover rounded-full max-sm:h-[250px] max-sm:w-[250px]" src={aboutMe} alt="" />
                         </div>
-                        <div data-aos="fade-left" className="col-span-12 lg:col-span-6 flex flex-col relative items-start justify-center">
+                        <div data-aos="fade-left" className="w-full flex flex-col relative items-start justify-center">
                             <h1 className="relative text-black text-4xl sm:text-5xl">About Me</h1>
                             <div className="flex mt-2">
                                 <div className="relative ms-24 w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
                             </div>
                             <div className="flex-wrap">
-                            <p className="md:mt-2 text-gray-700 md:text-md sm:text-sm w-3/4 text-left max-sm:mt-4">
-                            Passionate Front-End and Back-End Developer with over 1+ years of experience in web development and a strong expertise in ReactJS and NodeJS. Proficient in creating custom, SEO-friendly websites, currently advancing my skills in the MERN stack and AI to deliver cutting-edge solutions. Committed to providing high-quality, user-focused digital experiences.
-                            </p>
+                                <p className="md:mt-2 text-gray-700 md:text-md sm:text-sm w-full text-left max-sm:mt-4 !leading-6">
+                                    Passionate Front-End and Back-End Developer with over 1+ years of experience in web development and a strong expertise in ReactJS and NodeJS. Proficient in creating custom, SEO-friendly websites, currently advancing my skills in the MERN stack and AI to deliver cutting-edge solutions. Committed to providing high-quality, user-focused digital experiences.
+                                </p>
                             </div>
                             <div className="relative block mt-8 line">
                                 <Button
@@ -60,7 +60,7 @@ export default function Home() {
             <section id="skills" className="skills py-20">
                 <div>
                     <div data-aos="fade-up">
-                        <h1 className="relative text-5xl text-center">My Skills</h1>
+                        <h1 className="relative text-5xl text-center">Tech Stacks</h1>
                         <div className="flex justify-center mt-2">
                             <div className="relative w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
                         </div>
@@ -154,68 +154,74 @@ export default function Home() {
 
             <section className="my-journey py-20">
                 <div data-aos="fade-up">
-                    <h1 className="relative text-5xl text-center">My Journey</h1>
+                    <h1 className="relative text-5xl text-center">My Professional Experience</h1>
                     <div className="flex justify-center mt-2 mb-14">
                         <div className="relative w-3 h-3 border border-black rounded-full before:absolute before:h-0.5 before:top-1 before:bg-black before:w-16 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-black after:w-16 after:left-5"></div>
                     </div>
                 </div>
                 <div className="m-5">
                     <div data-aos="fade-left" className="flex justify-center gap-5 w-full max-sm:flex-col">
-                        <div className="card rounded-lg border-gray-300 shadow-2xl bg-gray-100 p-6 w-full h-[450px]">
-                            <div className="border-b-2 flex items-center pb-4 gap-4">
-                                <HiBookOpen className="bg-black text-white w-16 h-16 p-4 flex justify-center items-center rounded-full" />
-                                <h2 className="text-3xl">Education</h2>
-                            </div>
-                            <div className="card-body py-4">
-                                <div className="flex justify-between items-center mt-4">
-                                    <div>
-                                        <h2 className="text-xl font-medium">University Of Greenwich</h2>
-                                        <p className="text-sm text-gray-500">Software Enigneering Graduated</p>
-                                    </div>
-                                    <div>
-                                        <p className="bg-black text-white px-2 py-1 rounded text-xs">August 2020 to July 2024</p>
-                                    </div>
-
-                                </div>
-                                <div className="flex gap-2 items-center md:mt-2">
-                                    <h2 className="text-xl font-medium">GPA: </h2>
-                                    <p className="text-xl text-gray-500">3.5/4</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card rounded-lg border-gray-300 shadow-2xl bg-gray-100 p-6 mb-6 w-full h-[450px]">
+                        <div className="card rounded-lg border-gray-300 shadow-2xl bg-gray-100 p-6 mb-6 w-2/3 h-fit max-sm:w-full">
                             <div className="border-b-2 flex items-center pb-4 gap-4">
                                 <HiBriefcase className="bg-black text-white w-16 h-16 p-4 flex justify-center items-center rounded-full" />
-                                <h2 className="text-3xl">Work Experince</h2>
+                                <h2 className="text-3xl">Work Experience</h2>
                             </div>
                             <div className="card-body py-4">
                                 <div className="flex justify-between items-center mt-4">
-                                    <div>
-                                        <h2 className="text-xl font-medium">WALA ICT</h2>
-                                        <p className="text-sm text-gray-500">Front-End Junior</p>
-                                    </div>
-                                    <div>
-                                        <p className="bg-black text-white px-2 py-1 rounded text-xs">July 2024 to Present</p>
+                                    <div className="w-full">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <h2 className="text-xl font-medium">WALA ICT</h2>
+                                                <p className="text-sm text-gray-500">Front-End Junior</p>
+                                            </div>
+                                            <p className="bg-black text-white px-2 py-1 rounded text-xs">July 2024 - Present</p>
+                                        </div>
+                                        <ul className="list-disc ml-6 md:mt-2 text-sm">
+                                            <li>Work with Product Managers and Designers to implement and design the next generation of products
+                                            </li>
+                                            <li>Architect, build, and test new features</li>
+                                            <li>Partner with backend teams to help shape API endpoints</li>
+                                            <li>Work with UX teams to deliver important functionality to our flagship application</li>
+                                            <li>Maintain excellent coding standards and practices</li>
+                                        </ul>
                                     </div>
                                 </div>
 
                                 <div className="flex justify-between items-center mt-4">
-                                    <div>
-                                        <h2 className="text-xl font-medium">Midnight Tech</h2>
-                                        <p className="text-sm text-gray-500">Software Engineer Freelancer</p>
-                                    </div>
-                                    <div>
-                                        <p className="bg-black text-white px-2 py-1 rounded text-xs">June 2024 – Present</p>
+                                    <div className="w-full">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <h2 className="text-xl font-medium">Midnight Tech</h2>
+                                                <p className="text-sm text-gray-500">Software Engineer Freelancer</p>
+                                            </div>
+                                            <p className="bg-black text-white px-2 py-1 rounded text-xs">July 2024 - Present</p>
+                                        </div>
+                                        <ul className="list-disc ml-6 md:mt-2 text-sm">
+                                            <li>Custom Web & Mobile Development: Tailored solutions to fit your unique needs.
+                                            </li>
+                                            <li>Cross-Platform Expertise: High-performance apps for both iOS and Android.</li>
+                                            <li>Agile Delivery: Fast development cycles for quicker time-to-market.</li>
+                                            <li>Cutting-Edge Technologies: Using the latest tools for scalable, future-ready solutions.</li>
+                                            <li>User-Focused Design: Intuitive, engaging experiences for your audience.</li>
+                                        </ul>
                                     </div>
                                 </div>
 
                                 <div className="flex justify-between items-center mt-4">
-                                    <div>
-                                        <h2 className="text-xl font-medium">Nashtech Vietnam</h2>
-                                        <p className="text-sm text-gray-500">Backend Developer Trainee</p>
-                                    </div>
-                                    <div>
-                                        <p className="bg-black text-white px-2 py-1 rounded text-xs">Apr 2024 – July 2024</p>
+                                    <div className="w-full">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <h2 className="text-xl font-medium">Nashtech Vietnam</h2>
+                                                <p className="text-sm text-gray-500">Backend Developer Trainee</p>
+                                            </div>
+                                            <p className="bg-black text-white px-2 py-1 rounded text-xs">Apr 2024 – July 2024</p>
+                                        </div>
+                                        <ul className="list-disc ml-6 md:mt-2 text-sm">
+                                            <li>Acquired proficiency in technical skills including Git, Web Foundations, PostgreSQL, Node.js, TypeScript, NestJS, ReactJS, GraphQL, Docker, NextJS and AWS.
+                                            </li>
+                                            <li>Gained experience in team collaboration through the Scrum methodology and project management on Azure DevOps.</li>
+                                            <li>Successfully developed two projects utilizing the aforementioned technologies and Scrum methodology, with guidance from seasoned mentors at NashTech.</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +233,7 @@ export default function Home() {
             <section id="projects" className="relative p-5 md:p-20 bg-black">
                 {/* <Image className="absolute w-full rounded-[45px] bottom-0 left-0" src={servicesBg} alt=""/> */}
                 <div data-aos="fade-up" className="mb-14">
-                    <h1 className="relative text-white text-3xl md:text-5xl text-center">Professional Work Experience</h1>
+                    <h1 className="relative text-white text-3xl md:text-5xl text-center">My Projects</h1>
                     <div className="flex justify-center mt-2">
                         <div className="relative w-3 h-3 border border-white rounded-full before:absolute before:h-0.5 before:top-1 before:bg-white before:w-24 before:right-5 after:absolute after:h-0.5 after:top-1 after:bg-white after:w-24 after:left-5"></div>
                     </div>
