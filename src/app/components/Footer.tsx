@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 <a href="#">
                   <Image src={logo} alt="Logo" className='rounded-full md:mb-2' />
                 </a>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm max-sm:mt-4">
                   Hi, I'm Richard Nguyen, a passionate web developer with expertise in creating modern, responsive websites. With a strong background in HTML, CSS, JavaScript, ReactJS, NextJS and WordPress, I specialize in delivering high-quality web solutions. Explore my portfolio to see my latest projects and get in touch for collaborations!
                 </p>
                 

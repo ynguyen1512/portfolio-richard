@@ -4,7 +4,6 @@ import { FaDownload } from "react-icons/fa6";
 import { HiBookOpen, HiBriefcase, HiMail, HiPhone } from 'react-icons/hi';
 import Button from "./components/Button";
 import Projects from "./components/Projects";
-import SoftSkillsSlide from "./components/SoftSkillsSlide";
 import antDesignLogo from "/public/images/ant-design.svg";
 import aboutMe from "/public/images/avatar-richard.jpg";
 import cssLogo from "/public/images/css-logo.svg";
@@ -57,7 +56,6 @@ export default function Home() {
                 </div>
             </section>
 
-            <SoftSkillsSlide />
 
             <section id="skills" className="skills py-20">
                 <div>
@@ -153,8 +151,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-            <SoftSkillsSlide />
 
             <section className="my-journey py-20">
                 <div data-aos="fade-up">
