@@ -1,7 +1,7 @@
 "use client";
-import React, { FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 import { FaRegPaperPlane } from "react-icons/fa";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 interface FormData {
   firstname: string;
@@ -76,7 +76,7 @@ const ContactForm = () => {
             type="text"
             id="first-name"
             placeholder="First Name"
-            className="w-full p-3 placeholder:text-orange-200 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
+            className="w-full p-3 placeholder:text-white rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
             required
           />
         </div>
@@ -89,7 +89,7 @@ const ContactForm = () => {
             type="text"
             id="last-name"
             placeholder="Last Name"
-            className="w-full placeholder:text-orange-200 p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
+            className="w-full placeholder:text-white p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
             required
           />
         </div>
@@ -104,7 +104,7 @@ const ContactForm = () => {
             type="email"
             id="email"
             placeholder="Email"
-            className="w-full placeholder:text-orange-200 p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
+            className="w-full placeholder:text-white p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
             required
           />
         </div>
@@ -117,7 +117,7 @@ const ContactForm = () => {
             type="text"
             id="phone"
             placeholder="Phone"
-            className="w-full placeholder:text-orange-200 p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
+            className="w-full placeholder:text-white p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
             required
           />
         </div>
@@ -131,7 +131,7 @@ const ContactForm = () => {
           type="text"
           id="subject"
           placeholder="Subject"
-          className="w-full placeholder:text-orange-200 p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
+          className="w-full placeholder:text-white p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300"
           required
         />
       </div>
@@ -143,19 +143,19 @@ const ContactForm = () => {
           name="message"
           id="message"
           placeholder="Message"
-          className="w-full placeholder:text-orange-200 p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300 h-32"
+          className="w-full placeholder:text-white p-3 rounded-lg contact-input focus:ring-transparent focus-visible:outline-none text-white border-none focus:ring-2 focus:ring-purple-300 h-32"
           required
         ></textarea>
       </div>
       <div className="mt-6">
         <div className="relative block mt-8 line">
-          <button className="contact-btn border-2 border-white relative inline-block text-[16px] leading-[50px] font-bold bg-transparent rounded-xl px-[35px] pt-[1px] pb-0 overflow-hidden font-sans capitalize transition-all ease-linear duration-300 text-white hover:text-orange-500 hover:stroke-orange-500 z-[1]">
+          <button className="contact-btn border-2 border-white relative inline-block text-[16px] leading-[50px] font-bold bg-transparent rounded-xl px-[35px] pt-[1px] pb-0 overflow-hidden font-sans capitalize transition-all ease-linear duration-300 text-white hover:text-black hover:stroke-black z-[1]">
             {isLoading?(
                 <div className="flex items-center">
-                    <p className="bg-transparent text-white hover:text-orange-500">Loading...</p>
+                    <p className="bg-transparent text-white hover:text-black">Loading...</p>
                     <svg
                         aria-hidden="true"
-                        className="w-8 h-8 text-gray-200 animate-spin dark:text-white fill-orange-500"
+                        className="w-8 h-8 text-gray-200 animate-spin dark:text-white fill-black"
                         viewBox="0 0 100 101"
                         xmlns="http://www.w3.org/2000/svg"
                     >

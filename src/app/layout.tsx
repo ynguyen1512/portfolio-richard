@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import "./globals.css";
 
 // Define the custom fonts using localFont
 const lufga = localFont({
@@ -32,8 +32,8 @@ const lufga = localFont({
 
 // Define metadata
 export const metadata: Metadata = {
-  title: "CodeWithShabbir - Portfolio",
-  description: "Welcome to Shabbir's portfolio website. Explore projects, web development skills, and coding expertise.",
+  title: "Richard Portfolio",
+  description: "",
 };
 
 // Root Layout Component

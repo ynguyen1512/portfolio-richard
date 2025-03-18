@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import logo from "/public/images/muhammad-shabbir-logo.png";
-import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
+import logo from "/public/images/logo.jpeg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -78,24 +78,11 @@ const Header: React.FC = () => {
   return (
     <>
       <header className="fixed transition-all flex justify-between lg:my-4 lg:px-20 pl-2 pr-6 z-10 w-full lg:bg-transparent bg-black">
-        <nav className="justify-between w-full bg-black rounded-full lg:flex hidden transition-all">
+        <nav className="justify-center w-full bg-black rounded-full lg:flex hidden transition-all">
           <ul className="flex items-center">
-            <li className="text-white mx-10 my-6 relative font-semibold">
+          <li className="text-white mx-10 my-6 relative font-semibold">
               <a href="#">Home</a>
             </li>
-            <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#about-me">About</a>
-            </li>
-            <li className="text-white mx-10 my-6 relative font-semibold">
-              <a href="#service">Service</a>
-            </li>
-          </ul>
-          <div className="logo flex items-center">
-            <a href="#">
-              <Image src={logo} alt="Logo" />
-            </a>
-          </div>
-          <ul className="flex items-center">
             <li className="text-white mx-10 my-6 relative font-semibold">
               <a href="#skills">Skills</a>
             </li>
@@ -112,7 +99,7 @@ const Header: React.FC = () => {
         <nav className="lg:hidden flex justify-between w-full items-center py-2">
           <div className="logo flex items-center">
             <a href="#">
-              <Image src={logo} alt="Logo" />
+              <Image src={logo} alt="Logo" className="w-12 h-1w-12"/>
             </a>
           </div>
           <HiOutlineMenu
@@ -143,9 +130,6 @@ const Header: React.FC = () => {
         <ul className="flex flex-col items-center space-y-6">
           <li className="text-white mx-10 relative">
             <a href="#" onClick={handleCloseMenu}>Home</a>
-          </li>
-          <li className="text-white mx-10 relative">
-            <a href="#about-me" onClick={handleCloseMenu}>About</a>
           </li>
           <li className="text-white mx-10 relative">
             <a href="#service" onClick={handleCloseMenu}>Service</a>

@@ -1,8 +1,8 @@
-import Image, {StaticImageData} from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
+import project3 from "/public/images/services/figma-to-HTML-conversion.png";
 import project1 from "/public/images/services/frontend-web-development.png";
 import project2 from "/public/images/services/wordPress-website-creation.png";
-import project3 from "/public/images/services/figma-to-HTML-conversion.png";
 
 interface ServiceItem {
     id: number,
