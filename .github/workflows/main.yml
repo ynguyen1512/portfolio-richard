@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: 22
           script: |
-            cd /home/richard/portfolio-richard
+            cd /root/services/portfolio-richard
             git fetch origin
             git checkout production
             git pull
