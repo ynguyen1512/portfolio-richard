@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="container mx-auto px-4 sm:px-10">
                     <div className="flex justify-center w-full gap-12 mt-10 max-sm:flex-col">
                         <div data-aos="fade-right" className="w-full">
-                            <Image className="h-[500px] w-[500px] object-cover rounded-full max-sm:h-[250px] max-sm:w-[250px]" src={aboutMe} alt="" />
+                            <Image className="h-[600px] w-[600px] object-contain max-sm:w-full" src={aboutMe} alt="" />
                         </div>
                         <div data-aos="fade-left" className="w-full flex flex-col relative items-start justify-center">
                             <h1 className="relative text-black text-4xl sm:text-5xl">About Me</h1>
