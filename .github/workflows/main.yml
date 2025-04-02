@@ -3,16 +3,21 @@ name: Richard Deployment
 on:
   push:
     branches: [production]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy using ssh
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy using SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
             cd /home/richard/portfolio-richard
