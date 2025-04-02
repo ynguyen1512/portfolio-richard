@@ -40,7 +40,7 @@ export default function Home() {
                             </div>
                             <div className="flex-wrap">
                                 <p className="md:mt-2 text-gray-700 md:text-md sm:text-sm w-full text-left max-sm:mt-4 !leading-6">
-                                    Passionate Front-End and Back-End Developer with over 1+ years of experience in web development and a strong expertise in ReactJS and NodeJS. Proficient in creating custom, SEO-friendly websites, currently advancing my skills in the MERN stack and AI to deliver cutting-edge solutions. Committed to providing high-quality, user-focused digital experiences.
+                                    Passionate Front-End and Back-End Developer with over 2+ years of experience in web development and a strong expertise in ReactJS and NodeJS. Proficient in creating custom, SEO-friendly websites, currently advancing my skills in the MERN stack and AI to deliver cutting-edge solutions. Committed to providing high-quality, user-focused digital experiences.
                                 </p>
                             </div>
                             <div className="relative block mt-8 line">
@@ -251,7 +251,7 @@ export default function Home() {
 
                         <ul data-aos="fade-up">
                             <li className="my-2"><a className="flex gap-4 items-center" href="tel:+84366515120"><HiPhone className="bg-black text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center" />  +84 366 515 120</a></li>
-                            <li className="my-2"><a className="flex gap-4 items-center" href="nguyenphuyfgw@@gmail.com"><HiMail className="bg-black text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center" /> nguyenphuyfgw@gmail.com</a></li>
+                            <li className="my-2"><a className="flex gap-4 items-center"><HiMail className="bg-black text-white cursor-none text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center" /> nguyenphuyfgw@gmail.com</a></li>
                             <li className="my-2"><a className="flex gap-4 items-center" target="_blank" href="https://www.linkedin.com/in/ynguyen0101/"> <LinkedinIcon className="bg-black text-white text-sm w-10 h-10 p-2 rounded-full flex items-center justify-center" /> Y Nguyen (Richard)</a></li>
                         </ul>
                     </div>
