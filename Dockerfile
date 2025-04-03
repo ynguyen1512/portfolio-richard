@@ -7,16 +7,16 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN yarn install
+RUN npm install
 
 # Copy the rest of the project
 COPY . .
 
 # Build app (Next.js will be created .next folder)
-RUN yarn build
+RUN npm run build
 
 # Expose port 3000
 EXPOSE 3000
 
 # Start the app
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
