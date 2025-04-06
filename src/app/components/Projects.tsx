@@ -7,13 +7,14 @@ import project2 from "/public/images/projects/projects-2.png";
 import project3 from "/public/images/projects/projects-3.png";
 import project4 from "/public/images/projects/projects-4.png";
 import project5 from "/public/images/projects/projects-5.png";
+import project6 from "/public/images/projects/projects-6.png";
 
 interface Project {
-    title: string;
-    description: string;
-    image: StaticImageData;
-    liveLink: string;
-    tags: string[];
+  title: string;
+  description: string;
+  image: StaticImageData;
+  liveLink: string;
+  tags: string[];
 }
 
 const projectsData: Project[] = [
@@ -23,17 +24,17 @@ const projectsData: Project[] = [
       "STEKSHIELD is a powerful but simple platform that puts a wide selection of tools at your fingertips. Now, you can manage your shop, customers, and more to boost your shop performance.",
     image: project1,
     liveLink: "https://stekshield.com/",
-    tags: ["ReactJS", "TailwindCSS", "i18n", "RTK Query", "React Hook Form", "Ant Design","React Flowbite", "ChartJS",],
+    tags: ["ReactJS", "TailwindCSS", "i18n", "RTK Query", "React Hook Form", "Ant Design", "React Flowbite", "ChartJS",],
   },
   {
     title: "Thinkware CMS",
     description:
-      "This is a fully responsive landing page created based on the SMIT - Web Batch 12 Module 1 design on Figma. The project uses HTML, CSS, Bootstrap, and a little bit of JavaScript to deliver a smooth and interactive experience. It adapts seamlessly to different screen sizes, ensuring a great user experience across devices.",
+      "This is a CMS application created based on the SMIT - Web Batch 12 Module 1 design on Figma. The project uses ReactJS, TailwindCSS, RTK Query. It adapts seamlessly to different screen sizes, ensuring a great user experience across devices.",
     image: project2,
     liveLink: "https://thinkware-admin.wala-ict.org/",
     tags: ["ReactJS", "TailwindCSS", "Ant Design", "RTK Query", "i18n"],
   },
-  
+
   {
     title: "Prenex AI Landing Page & CMS",
     description:
@@ -49,6 +50,14 @@ const projectsData: Project[] = [
     image: project4,
     liveLink: "https://www.edunet.net/main/",
     tags: ["HTML", "SCSS", "JavaScript"],
+  },
+  {
+    title: "Awwing",
+    description:
+      "The Awwing Project is a game-changer for businesses seeking high-quality development solutions with no delays. We specialize in providing a fully verified team of experts, ensuring that every aspect of your project is executed by professionals who bring real, tangible value. With a focus on speed and precision, we assemble the right talent for your specific needs, eliminating the hassle of lengthy recruitment processes.",
+    image: project6,
+    liveLink: "https://awwing.io/home",
+    tags: ["ReactJS", "TailwindCSS", "React Query", "Ant Design", "i18n", "Mantine"],
   },
   {
     title: "Chop Chep Pets",
@@ -87,12 +96,12 @@ const Projects: React.FC = () => {
               ))}
             </div>
             <div className="relative block mt-8 line">
-            <Button
+              <Button
                 classes="border-white bg-transparent text-white hover:text-black hover:bg-white"
                 title="Live Preview"
                 icon={<FaChevronRight className="ml-1 inline-block text-sm font-bold w-6" />}
                 link={project.liveLink}
-            />
+              />
             </div>
           </div>
         </div>
